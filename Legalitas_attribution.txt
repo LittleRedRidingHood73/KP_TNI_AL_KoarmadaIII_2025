@@ -1,0 +1,13 @@
+google: <a href="https://www.flaticon.com/free-icons/google" title="google icons">Google icons created by Freepik - Flaticon</a>
+
+facebook: <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Pixel perfect - Flaticon</a>
+
+money_onboarding: <a href="https://www.flaticon.com/free-animated-icons/coin" title="coin animated icons">Coin animated icons created by Freepik - Flaticon</a>
+
+online_shopping_onboarding: <a href="https://www.flaticon.com/free-animated-icons/online-shop" title="online shop animated icons">Online shop animated icons created by Freepik - Flaticon</a>
+
+fast_delivery_onboarding: <a href="https://www.flaticon.com/free-animated-icons/fast-delivery" title="fast delivery animated icons">Fast delivery animated icons created by Freepik - Flaticon</a>
+
+verify_email: <a href="https://www.flaticon.com/free-animated-icons/security" title="security animated icons">Security animated icons created by Freepik - Flaticon</a>
+
+success: <a href="https://www.flaticon.com/free-animated-icons/done" title="done animated icons">Done animated icons created by Freepik - Flaticon</a>
