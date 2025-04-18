@@ -10,7 +10,7 @@ import 'brand_title_text.dart';
 class TBrandTitleWithVerifiedIcon extends StatelessWidget {
   const TBrandTitleWithVerifiedIcon({
     super.key,
-    this.textColor,
+    this.textColor = TColors.black,
     this.maxLines = 1,
     required this.title,
     this.iconColor = TColors.primary,
@@ -20,14 +20,14 @@ class TBrandTitleWithVerifiedIcon extends StatelessWidget {
 
   final String title;
   final int maxLines;
-  final Color? textColor, iconColor;
+  final Color textColor, iconColor;
   final TextAlign? textAlign;
   final TextSizes brandTextSize;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.min,
+      mainAxisSize: MainAxisSize.max,
       children: [
         Flexible(
           child: TBrandTitleText(

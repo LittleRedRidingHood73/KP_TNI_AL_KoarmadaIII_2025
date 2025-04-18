@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 class TSectionHeading extends StatelessWidget {
   const TSectionHeading({
-    super.key, this.textColor, this.showActionButton = true, required this.title, this.buttonTitle = 'View all', this.onPressed,
+    super.key,
+    this.textColor,
+    this.showActionButton = true,
+    required this.title,
+    this.buttonTitle = 'View all',
+    this.onPressed,
   });
 
   final Color? textColor;
@@ -17,11 +22,14 @@ class TSectionHeading extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.headlineSmall!.apply(color: textColor),
+          style: Theme.of(
+            context,
+          ).textTheme.headlineSmall!.apply(color: textColor),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        if(showActionButton) TextButton(onPressed: onPressed, child: Text(buttonTitle))
+        if (showActionButton)
+          TextButton(onPressed: onPressed, child: Text(buttonTitle)),
       ],
     );
   }

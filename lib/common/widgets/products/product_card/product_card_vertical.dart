@@ -41,7 +41,7 @@ class TProductCardVertical extends StatelessWidget {
           children: [
             //thumbnail, wishlist button, discount tag
             TRoundedContainer(
-              height: 100,
+              height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
@@ -77,9 +77,9 @@ class TProductCardVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TProductTitleText(title: 'product name', smallSize: true),
+                  TProductTitleText(title: 'Product Name', smallSize: true),
                   SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleWithVerifiedIcon(title: 'Product'),
+                  TBrandTitleWithVerifiedIcon(title: 'Brand'),
                 ],
               ),
             ),
@@ -97,7 +97,7 @@ class TProductCardVertical extends StatelessWidget {
                 // add to cart button
                 Container(
                   decoration: const BoxDecoration(
-                    color: TColors.dark,
+                    color: TColors.primary,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(TSizes.cardRadiusMd),
                       bottomLeft: Radius.circular(TSizes.productImageRadius),
