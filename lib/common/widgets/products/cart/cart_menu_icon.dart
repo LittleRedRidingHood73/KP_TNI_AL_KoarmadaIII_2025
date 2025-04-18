@@ -6,7 +6,7 @@ import '../../../../utils/constants/colors.dart';
 
 class TCartCounterIcon extends StatelessWidget {
   const TCartCounterIcon({
-    super.key, required this.iconColor, required this.onPressed,
+    super.key, this.iconColor = TColors.white, required this.onPressed,
   });
 
   final Color iconColor;
@@ -16,7 +16,7 @@ class TCartCounterIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        IconButton(onPressed: () {}, icon: const Icon(Iconsax.shopping_bag, color: TColors.white,)),
+        IconButton(onPressed: () {}, icon: Icon(Iconsax.shopping_bag, color: iconColor,)),
         Positioned(
           right: 0,
 

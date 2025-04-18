@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tni_al/common/widgets/appbar/appbar.dart';
 import 'package:tni_al/common/widgets/custom_shapes/curved_edges/curved_edges.dart';
+import 'package:tni_al/common/widgets/layouts/grid_layout.dart';
+import 'package:tni_al/common/widgets/products/product_card/product_card_vertical.dart';
 import 'package:tni_al/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tni_al/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:tni_al/features/shop/screens/home/widgets/promo_slider.dart';
@@ -63,7 +65,14 @@ class HomeScreen extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
+              child: Column(
+                children: [
+                  TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
+                  SizedBox(height: TSizes.spaceBtwSections,),
+                  
+                  TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical())
+                ],
+              ),
             ),
           ],
         ),
