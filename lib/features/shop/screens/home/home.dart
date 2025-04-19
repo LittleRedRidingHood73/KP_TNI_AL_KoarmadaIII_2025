@@ -67,10 +67,22 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
-                  SizedBox(height: TSizes.spaceBtwSections,),
-                  
-                  TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical())
+                  TPromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3,
+                    ],
+                  ),
+                  SizedBox(height: TSizes.spaceBtwSections),
+
+                  TSectionHeading(title: 'Pupolar Products', textColor: TColors.black, onPressed: (){}),
+                  SizedBox(height: TSizes.spaceBtwItems),
+
+                  TGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const TProductCardVertical(),
+                  ),
                 ],
               ),
             ),
@@ -80,5 +92,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
