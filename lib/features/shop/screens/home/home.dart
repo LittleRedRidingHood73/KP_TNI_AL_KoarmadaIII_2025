@@ -28,6 +28,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool dark = THelperFunctions.isDarkMode(context);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -70,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                   TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
                   SizedBox(height: TSizes.spaceBtwSections,),
 
-                  TSectionHeading(title: 'Popular Products', textColor: TColors.black, onPressed: () {},),
+                  TSectionHeading(title: 'Popular Products', textColor: dark ? TColors.white : TColors.black, onPressed: () {},),
                   SizedBox(height: TSizes.spaceBtwItems,),
                   
                   TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical())
