@@ -41,7 +41,7 @@ class TProductCardVertical extends StatelessWidget {
           children: [
             //thumbnail, wishlist button, discount tag
             TRoundedContainer(
-              height: 100,
+              height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
