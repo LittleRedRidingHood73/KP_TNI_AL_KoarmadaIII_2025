@@ -1,4 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:tni_al/utils/helpers/helper_functions.dart';
+
+import '../../../../../common/widgets/appbar/appbar.dart';
+import '../../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
+import '../../../../../common/widgets/icons/circular_icon.dart';
+import '../../../../../common/widgets/images/rounded_image.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class TProductImagesSlider extends StatelessWidget {
   const TProductImagesSlider({super.key});
@@ -7,14 +17,14 @@ class TProductImagesSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
 
-    return TCurvedEdgesWidget(
+    return TCurvedEdgeWidget(
       child: Container(
         color: dark ? TColors.darkerGrey : TColors.light,
-        child: const Stack(
+        child: Stack(
           children: [
 
             /// Main Large Image
-            SizedBox(
+            const SizedBox(
               height: 400,
               child: Padding(
                 padding: EdgeInsets.all(TSizes.productImageRadius * 2),
@@ -49,7 +59,7 @@ class TProductImagesSlider extends StatelessWidget {
             /// Appbar Icons
             TAppBar(
               showBackArrow: true,
-              actions: [TcircularIcon(icon: Iconsax.hegrt5, color: Colors.red)],
+              actions: [TCircularIcon(icon: Iconsax.heart5, color: Colors.red)],
             )
           ],
         ),

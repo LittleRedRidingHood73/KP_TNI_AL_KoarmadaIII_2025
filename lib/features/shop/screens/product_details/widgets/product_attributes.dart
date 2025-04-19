@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tni_al/common/widgets/chips/choice_chip.dart';
+import 'package:tni_al/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tni_al/utils/helpers/helper_functions.dart';
+
+import '../../../../../common/widgets/texts/product_price_text.dart';
+import '../../../../../common/widgets/texts/product_title_text.dart';
+import '../../../../../common/widgets/texts/section_heading.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class TProductAttributes extends StatelessWidget {
   const TProductAttributes({super.key});
@@ -8,11 +14,12 @@ class TProductAttributes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-    return const Column(
+
+    return Column(
       children: [
         /// -- Selected Attribute Pricing & Description
-        TRoundedConteiner(
-          Padding: const EdgeInsert.all(TSizes.md),
+        TRoundedContainer(
+          padding: const EdgeInsets.all(TSizes.md),
           backgroundColor: dark ? TColors.darkerGrey : TColors.grey,
           child: Column(
             children: [
@@ -32,9 +39,7 @@ class TProductAttributes extends StatelessWidget {
                           /// Actual Price
                           Text(
                             '\$25',
-                            style: Theme.of(context).textTheme.titleSmall!.apply(
-                              decoration: TextDecoration.lineThrough,
-                            ),
+                            style: Theme.of(context).textTheme.titleSmall!.apply(decoration: TextDecoration.lineThrough,),
                           ),
 
                           const SizedBox(width: TSizes.spaceBtwItems),
@@ -68,7 +73,7 @@ class TProductAttributes extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwItems),
 
         /// -- Attributes
-        Column(
+        const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const TSectionHeading(title: 'Colors', showActionButton: false),
@@ -85,7 +90,7 @@ class TProductAttributes extends StatelessWidget {
             ),
           ],
         ),
-        Column(
+        const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const TSectionHeading(title: 'Colors', showActionButton: false),

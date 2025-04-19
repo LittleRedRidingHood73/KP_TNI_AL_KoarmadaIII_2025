@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:readmore/readmore.dart';
 import 'package:tni_al/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
 import 'package:tni_al/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:tni_al/features/shop/screens/product_details/widgets/product_detail_image.slider.dart';
@@ -8,12 +11,16 @@ import 'package:tni_al/features/shop/screens/product_details/widgets/rating_shar
 import 'package:tni_al/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:tni_al/utils/helpers/helper_functions.dart';
 
+import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../../utils/constants/sizes.dart';
+
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions().isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
+
     return Scaffold(
       bottomNavigationBar: TBottomAddToCart(),
         body: SingleChildScrollView(
@@ -26,11 +33,11 @@ class ProductDetailScreen extends StatelessWidget {
 
               /// 2 - Product Details
               Padding(
-                padding: EdgesInsert.only(right: TSizes.defaultSpace, left: TSizes.defaultSpace, bottom: TSizes.defaultSpace),
+                padding:EdgeInsets.only(right: TSizes.defaultSpace, left: TSizes.defaultSpace, bottom: TSizes.defaultSpace),
                 child: Column(
                   children: [
                     /// - Rating & Share Button
-                    TRatingAndShare()
+                    TRatingAndShare(),
 
                     /// - Price, Title, Stock, & Brand
                     TProductMetaData(),
@@ -69,7 +76,7 @@ class ProductDetailScreen extends StatelessWidget {
                       children: [
                         const TSectionHeading(title: 'Reviews (199)', showActionButton: false),
                         IconButton(
-                          icon: const Icon(IconSax.arrow_right_3, size: 18),
+                          icon: const Icon(Iconsax.arrow_right_3, size: 18),
                           onPressed: () => Get.to(() => const ProductReviewsScreen())
                         ),
                       ],

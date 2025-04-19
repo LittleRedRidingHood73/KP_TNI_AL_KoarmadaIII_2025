@@ -1,7 +1,18 @@
 
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:tni_al/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tni_al/utils/helpers/helper_functions.dart';
+
+import '../../../../../common/widgets/images/circular_image.dart';
+import '../../../../../common/widgets/texts/brand_title_text_with_verified_icon.dart';
+import '../../../../../common/widgets/texts/product_price_text.dart';
+import '../../../../../common/widgets/texts/product_title_text.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/enums.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class TProductMetaData extends StatelessWidget {
   const TProductMetaData({super.key});
@@ -16,7 +27,7 @@ class TProductMetaData extends StatelessWidget {
         Row(
           children: [
             /// Sale Tag
-            TRoundedCotainer(
+            TRoundedContainer(
               radius: TSizes.sm,
               backgroundColor: TColors.secondary.withOpacity(0.8),
               padding: const EdgeInsets.symmetric(horizontal: TSizes.sm, vertical: TSizes.xs),
@@ -52,7 +63,7 @@ class TProductMetaData extends StatelessWidget {
             TCircularImage(
               image: TImages.cosmeticsIcon,
               width: 32,
-              heigt: 32,
+              height: 32,
               overlayColor: darkMode ? TColors.white : TColors.black,
             ),
             TBrandTitleWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.medium),

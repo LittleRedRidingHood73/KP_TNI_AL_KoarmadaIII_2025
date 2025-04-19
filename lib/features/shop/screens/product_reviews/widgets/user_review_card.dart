@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../../../common/widgets/product/ratings/rating_indicator.dart';
+import 'package:readmore/readmore.dart';
+import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
+import '../../../../../utils/constants/colors.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
 class UserReviewCard extends StatelessWidget {

@@ -4,14 +4,14 @@ import 'package:tni_al/features/shop/screens/product_reviews/widgets/rating_prog
 import 'package:tni_al/features/shop/screens/product_reviews/widgets/user_review_card.dart';
 import 'package:tni_al/common/widgets/appbar/appbar.dart';
 
-import '../../../../common/widgets/product/ratings/rating_indicator.dart';
+import '../../../../utils/constants/sizes.dart';
 
 class ProductReviewsScreen extends StatelessWidget {
   const ProductReviewsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       /// -- Appbar
       appBar: TAppBar(title: Text('Reviews & Ratings'), showBackArrow: true),
 
