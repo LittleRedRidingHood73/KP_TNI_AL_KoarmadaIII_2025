@@ -28,6 +28,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool dark = THelperFunctions.isDarkMode(context);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -76,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: TSizes.spaceBtwSections),
 
-                  TSectionHeading(title: 'Pupolar Products', textColor: TColors.black, onPressed: (){}),
+                  TSectionHeading(title: 'Popular Products', textColor: TColors.black, onPressed: (){}),
                   SizedBox(height: TSizes.spaceBtwItems),
 
                   TGridLayout(

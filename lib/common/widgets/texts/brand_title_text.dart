@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tni_al/utils/constants/colors.dart';
 
 import '../../../utils/constants/enums.dart';
 
 class TBrandTitleText extends StatelessWidget {
   const TBrandTitleText({
     super.key,
-    this.color,
+    this.color = TColors.black,
     this.maxLines = 1,
     required this.title,
     this.textAlign = TextAlign.center,

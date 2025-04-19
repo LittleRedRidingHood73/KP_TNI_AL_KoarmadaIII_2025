@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tni_al/utils/constants/colors.dart';
 
+import '../../../utils/constants/colors.dart';
+
 class TProductTitleText extends StatelessWidget {
   const TProductTitleText({
     super.key,
@@ -21,10 +23,9 @@ class TProductTitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style:
-          smallSize
-              ? Theme.of(context).textTheme.labelLarge!.apply(color: textColor)
-              : Theme.of(context).textTheme.titleSmall!.apply(color: textColor),
+      style: smallSize
+          ? Theme.of(context).textTheme.labelLarge!.apply(color: textColor)
+          : Theme.of(context).textTheme.titleSmall!.apply(color: textColor),
       overflow: TextOverflow.ellipsis,
       maxLines: maxLines,
       textAlign: textAlign,
