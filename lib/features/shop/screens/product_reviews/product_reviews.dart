@@ -4,6 +4,7 @@ import 'package:tni_al/features/shop/screens/product_reviews/widgets/rating_prog
 import 'package:tni_al/features/shop/screens/product_reviews/widgets/user_review_card.dart';
 import 'package:tni_al/common/widgets/appbar/appbar.dart';
 
+import '../../../../common/widgets/products/ratings/rating_indicator.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class ProductReviewsScreen extends StatelessWidget {

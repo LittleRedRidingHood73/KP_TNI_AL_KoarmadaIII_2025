@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tni_al/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tni_al/utils/helpers/helper_functions.dart';
 
+import '../../../../../common/widgets/chips/choice_chip.dart';
 import '../../../../../common/widgets/texts/product_price_text.dart';
 import '../../../../../common/widgets/texts/product_title_text.dart';
 import '../../../../../common/widgets/texts/section_heading.dart';
@@ -73,7 +74,7 @@ class TProductAttributes extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwItems),
 
         /// -- Attributes
-        const Column(
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const TSectionHeading(title: 'Colors', showActionButton: false),
@@ -90,7 +91,7 @@ class TProductAttributes extends StatelessWidget {
             ),
           ],
         ),
-        const Column(
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const TSectionHeading(title: 'Colors', showActionButton: false),

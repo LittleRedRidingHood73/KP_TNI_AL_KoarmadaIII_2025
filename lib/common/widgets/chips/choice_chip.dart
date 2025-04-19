@@ -1,8 +1,11 @@
-
-
-
 // -- Most of the Styling is already defined in the Utils -> Themes -> ChipTheme.dart
-import 'package:koperasi/utils/helpers/helper_functions.dart';
+
+
+import 'package:flutter/material.dart';
+
+import '../../../utils/constants/colors.dart';
+import '../../../utils/helpers/helper_functions.dart';
+import '../custom_shapes/containers/circular_container.dart';
 
 class TChoiceChip extends StatelessWidget {
   const TChoiceChip({
@@ -22,7 +25,7 @@ class TChoiceChip extends StatelessWidget {
     return Theme(
       data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
       child: ChoiceChip(
-        label: isColor ? const SizedBox() : Text(text,
+        label: isColor ? const SizedBox() : Text(text),
         selected: selected,
         onSelected: onSelected,
         labelStyle: TextStyle(color: selected ? TColors.white : null),
